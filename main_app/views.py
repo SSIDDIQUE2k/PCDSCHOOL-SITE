@@ -1,6 +1,8 @@
 # main_app/views.py
 
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.views.generic.edit import CreateView
+from .models import Teacher
 
 # Define the home view function
 def home(request):
@@ -16,5 +18,9 @@ def services(request):
     return render(request, 'services.html')
 
 def educators(request):
-    """Calendar page view"""
-    return render(request, 'educators.html')
+    teachers = Teacher.objects.all()  # look familiar?
+    return render(request, 'educators.html', {'teachers': teachers})
+
+class TeacherCreate(CreateView):
+    model = Teacher
+    fields = "__all__"

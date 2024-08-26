@@ -1,9 +1,25 @@
 {% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'style/teachers/teacher-index.css' %}"/>
+{% endblock %} 
 {% block content %}
-<h1>About the Caqt Collector</h1>
-<hr />
-<p class="page-content">
-  I like long romantic walks down the produce aisle. Also, I am currently job
-  seeking!
-</p>
+
+<section class="page-header">
+  <h1>Teacher List</h1>
+</section>
+
+<section class="card-container">
+  {% for teacher in teachers %}
+    <div class="card">
+      <div class="card-content">
+        <h2 class="card-title">{{ teacher.name }}</h2>
+        <p>Grade {{ teacher.grade }}</p>
+        <p>{{ teacher.description }}</p>
+        <p>Subject: {{ teacher.subject }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
 {% endblock %}
