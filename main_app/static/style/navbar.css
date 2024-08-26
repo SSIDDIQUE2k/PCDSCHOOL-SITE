@@ -106,5 +106,7 @@ nav {
         background-color: aqua;
     }
 }
-
+@media (max-width: 360px) {
+    
+}
     
