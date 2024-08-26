@@ -15,6 +15,6 @@ def services(request):
     """Services page view"""
     return render(request, 'services.html')
 
-def calendar(request):
+def educators(request):
     """Calendar page view"""
-    return render(request, 'calendar.html')
+    return render(request, 'educators.html')
