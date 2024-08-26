@@ -8,15 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style/navbar.css' %}"/>
     {% block head %} 
-    <link rel="stylesheet" href="{% static 'main_app/navbar.css' %}"/>
+
     {% endblock %}
   </head>
   <body>
     <header>
       <nav>
         <div class="logo">
-            <img src="{% static 'images/Blue_and_White_Circle_Surfing_Club_Logo-removebg-preview.png' %}" alt="Logo">
+          <img src="{% static 'images/Blue_and_White_Circle_Surfing_Club_Logo-removebg-preview.png' %}" alt="Logo">
           <h3>People's DayCare And Elementry School</h3>
 
         </div>
